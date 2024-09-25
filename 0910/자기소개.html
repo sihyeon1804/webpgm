@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>나의 소개</title>
+    <style>
+        body {
+            background-color: lavender;
+            color: green;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        h3 {
+            text-align: center;
+            color: rgb(42, 89, 189);
+        }
+
+        hr {
+            height: 5px;
+            border: solid black;
+            background-color: black
+        }
+
+        span {
+            color: darkred;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function show() {
+            document.getElementById("fig").src = "C:\Users\홍시현\OneDrive\문서\과제\web\증명사진.jpeg"
+        }
+
+        function hide() {
+            document.getElementById("fig").src = "";
+        }
+    </script>
+</head>
+<body>
+<h3 onmouseover="show()" onmouseout="hide()">홍시현</h3>
+<hr>
+<div><img id="fig" src=""></div>
+저는 대한민국에서 태어나서 소프트웨어를 전공하는 학생입니다. 제가 제일 좋아하는 과목은 <span>웹 프로그래밍</span>입니다.
+</body>
+</html>
