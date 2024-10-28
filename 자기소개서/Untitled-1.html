@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8" />
+
+<style>
+
+@font-face {
+	font-family: LOGO_FONT;
+	src: url("fonts/ALISON_.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: MENU_FONT;
+	src: url("fonts/Navi 산하체.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: HEAD_TITLE_FONT;
+	src: url("fonts/yoon수다핑크릴리.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: HEAD_SUB_FONT;
+	src: url("fonts/헤움봄비.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: NORMAL_FONT;
+	src: url("fonts/SM유노윤호.ttf") format("truetype");
+}
+
+*{
+	font-family: NORMAL_FONT;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #2e7f7f;
+}
+
+hgroup h1 {
+	font-family: HEAD_TITLE_FONT;
+	text-shadow: 1px 1px 1px #aaa;
+	font-size: 32px;
+	color: #4e8f8f;
+}
+
+hgroup h2 {
+	font-family: HEAD_SUB_FONT;
+	color: #5e7f7f;
+	text-shadow: 1px 1px 1px #eee;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+aside {
+	position: absolute;
+	width: 200px;
+	top: 0;
+	right: 0;
+}
+
+
+#wrapBox {
+	position: relative;
+	width: 800px;
+	margin: auto;
+	text-align: left;
+}
+
+#topMenus h1 {
+	font-family: LOGO_FONT;
+	font-size: 32px;
+	padding: 20px;
+	color: #2e4f4f;
+	text-shadow: 2px 2px 2px #ccc;
+}
+
+#topMenus ul {
+	position: absolute;
+	top: 8px;
+	right: 0;
+	text-align: right;
+	width: 500px;
+	height: 50px;
+	font-size: 16px;
+}
+
+#topMenus ul li {
+	display: inline;
+	padding-right: 15px;
+}
+
+#topMenus ul li a {
+	font-family: MENU_FONT;
+	font-size: 22px;
+	text-shadow: 2px 2px 1px #ddd;
+}
+
+#topMenus ul li a:hover {
+	border-bottom: #2eafaf 2px dotted;
+	padding-bottom: 3px;
+}
+
+#nowStep {
+	width: 100px;
+}
+
+#mainContent {
+	position: relative;
+}
+
+#myPhoto img {
+	box-shadow: rgba(0, 0, 100, 0.25) 2px 3px 3px;
+	-webkit-box-shadow: rgba(0, 0, 100, 0.25) 2px 3px 3px; 
+	-moz-box-shadow: rgba(0, 0, 100, 0.25) 2px 3px 3px;
+}
+
+#copyleft {
+	background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#f2f2f2)); 
+	padding: 10px;
+	text-align: center;
+	color: #999;
+}
+
+
+.shadowBox {
+	border: #ddd 1px solid;
+	border-radius: 10px;
+	-moz-border-radius: 10px; 
+	box-shadow: rgba(0, 0, 128, 0.2) 0px 3px 3px;
+	-webkit-box-shadow: rgba(0, 0, 128, 0.2) 0px 3px 3px; 
+	-moz-box-shadow: rgba(0, 0, 128, 0.2) 0px 3px 3px; 
+
+.fixWidth {
+	width: 560px;
+	padding: 0 10px 0 10px;
+	margin: 0 0 20px 0;
+}
+</style>
+
+<script>
+
+window.onload = function() {
+
+	
+	var context = document.getElementById("canvas").getContext("2d");
+
+	
+	context.beginPath();
+	context.arc(150, 100, 70, 0, Math.PI * 2);
+	context.lineWidth = 10;
+	context.lineCap = 'round';
+	context.strokeStyle = 'rgba(200, 125, 10, 0.3)';
+	context.stroke();
+
+	
+	context.beginPath();
+	context.arc(120, 90, 10, -(Math.PI), 0);
+	context.lineWidth = 5;
+	context.lineCap = 'round';
+	context.strokeStyle = 'rgba(230, 130, 20, 0.5)';
+	context.stroke();
+
+	
+	context.beginPath();
+	context.arc(180, 90, 10, -(Math.PI), 0);
+	context.lineWidth = 5;
+	context.lineCap = 'round';
+	context.strokeStyle = 'rgba(230, 130, 20, 0.5)';
+	context.stroke();
+
+	
+	context.beginPath();
+	context.moveTo(130, 120);
+	context.lineTo(170, 120);
+	context.lineWidth = 3;
+	context.lineCap = 'round';
+	context.strokeStyle = 'rgba(250, 145, 30, 0.5)';
+	context.stroke();
+
+	
+	context.beginPath();
+	context.arc(150, 120, 20, 0, -(Math.PI));
+	context.lineWidth = 3;
+	context.lineCap = 'round';
+	context.strokeStyle = 'rgba(250, 145, 30, 0.5)';
+	context.stroke();
+
+	
+	context.font = "bold 24px MENU_FONT";
+	context.fillText("Welcome~! Happy day~!", 280, 100);
+	context.stroke();
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapBox">
+
+	
+	<section id="topMenus">
+		<h1 class="shadowBox">SIHYEON</h1>
+		
+		
+		<nav>
+			<ul>
+				<li><a href="./">Intro</a></li>
+				<li><a href="https://blog.naver.com/">블로그</a></li>
+				<li><a href="mailto:sihyun1804@gmail.com">이메일</a></li>
+                <li><a href="https://www.instagram.com/">인스타그램</a></li>
+			</ul>
+		</nav>
+	</section>
+
+	
+	<header>
+		<hgroup>
+			<h1>홍시현의 소개 페이지</h1>
+			<h2>만나서 반갑습니다! 이 페이지는 저를 소개하는 페이지입니다! 
+			이 페이지는 HTML5 기반으로 제작되었으며, 예제용으로 작성되었습니다.
+			아직까지 계속 작업중입니다. 현재 진행상태는 <progress id="nowStep" value="35" max="100">35%</progress> 입니다. 감사합니다!</h2>
+		</hgroup>
+	</header>
+	
+	<div id="mainContent">
+		<div id="basicInfo" class="shadowBox fixWidth">
+			<section>
+				<hgroup>
+					<h1>기본정보</h1>
+				</hgroup>
+				
+				<ul>
+					<li>대청초등학교 졸업</li>
+					<li>대청중학교 졸업</li>
+					<li>삼문고등학교 졸업</li>
+					<li>2024년 현재 경성대학교 2학년 재학중</li>
+			
+				</ul>
+			</section>
+		</div>
+		
+		<div id="techLog" class="shadowBox fixWidth">
+			<section>
+				<hgroup>
+					<h1>개발이력</h1>
+				</hgroup>
+				
+				<ul>
+					<li>아직 없음</li>
+					
+				</ul>
+			</section>
+		</div>
+		
+		<div id="say" class="fixWidth">
+			<section>
+				<canvas id="canvas" width="550" height="200"></canvas>
+			</section>
+		</div>
+		
+		
+		<aside>
+			<figure id="myPhoto">
+				<img src="C:\Users\홍시현\OneDrive\사진\증명사진\증명사진.jpeg" alt="홍시현 사진" width="130" height="150"/>
+				<figcaption>홍시현 사진</figcaption>
+			</figure>
+		</aside>
+	</div>
+	
+	
+
+</div>
+
+</body>
+
+</html>
