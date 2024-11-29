@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Treeview with Nested Folders</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Treeview CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>File Treeview</h2>
+    <div id="file-tree"></div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Treeview JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+
+  <script>
+    // 트리 데이터를 정의합니다.
+    const treeData = [
+      {
+        text: "projects",
+        nodes: [
+          {
+            text: "examples",
+            nodes: [
+              {
+                text: "folder1",
+                nodes: [
+                  { text: "01_예제01_여러분의나이가_담긴변수.html" },
+                ]
+              },
+              {
+                text: "folder2",
+                nodes: [
+                  { text: "02_예제02_여러분의_이름_나이가_담긴변수.html" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ];
+
+    // 트리뷰 초기화
+    $(function () {
+      $('#file-tree').treeview({
+        data: treeData,
+        levels: 2, // 기본적으로 두 레벨까지 확장
+        showBorder: true, // 테두리 표시
+        expandIcon: 'bi bi-chevron-right', // 확장 아이콘
+        collapseIcon: 'bi bi-chevron-down', // 축소 아이콘
+        emptyIcon: 'bi bi-file-earmark', // 파일 아이콘
+      });
+    });
+  </script>
+</body>
+</html>
